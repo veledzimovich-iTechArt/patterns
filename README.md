@@ -1,5 +1,4 @@
-# patterns
-Design patterns
+# Design patterns
 
 ## Principles
 
@@ -12,3 +11,16 @@ Design patterns
 - Principle of Least Knowledge - connect only with close friends
 - Hollywood principe - high level component define behaviour of low level components.
 - Single responsibility principe - one cause to change
+
+## Pattern
+Pattern is a solving task in context
+
+- context - typical situation to use pattern
+- task - our goal depends of context restrictions
+- solving - code structure to reach goals with restrictions
+
+Patterns balance of "powers"
+- goal (light side)
+- restrictions (dark side)
+
+Catalog of patterns by Gang of Four
