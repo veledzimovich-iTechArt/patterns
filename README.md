@@ -23,4 +23,62 @@ Patterns balance of "powers"
 - goal (light side)
 - restrictions (dark side)
 
-Catalog of patterns by Gang of Four
+## Catalog of patterns by "Gang of Four" (Cristofer Alexander "A Pattern Language")
+
+### Goal
+
+#### Creational
+- Singleton
+- Abstract Factory
+- Factory method
+
+
+#### Behavioral (interaction and responsibilites among classes)
+- State
+- Strategy
+- Iterator
+- Observer
+- Template method
+
+#### Structural (combine objects together)
+- Decorator
+- Facade
+- Adapter
+- Composite
+- Proxy
+
+### Class or Object
+
+#### Class patterns(inheritance)
+- Template method
+- Factory method
+- Adapter
+
+#### Object patterns(composition)
+- Singleton
+- Abstract factory
+- State
+- Strategy
+- Iterator
+- Observer
+- Decorator
+- Facade
+- Composite
+- Proxy
+
+## How To
+
+- Keep it simple
+- Patterns aren't perfect solutuion (customize patterns)
+- Use patterns when needed (for places where system could changed)
+- Refactoring it is time for using patterns
+- Remove patterns when needed
+- Avoid over-engineering
+
+Patterns is a words to talk about code structure.
+
+## Antipatterns - looks like nice solution
+- Golden hammer (use everywhere only one well-known technology)
+
+## Links
+https://refactoring.guru/design-patterns
