@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web View</title>
+    </head>
+    <body >
+        <h2>Color Beat</h2>
+        <p id='color_label'></p>
+        <div id='color_view' style="height:100px;"></div>
+        <h2>Controls</h2>
+        <form method="post" action="/controls">
+            <input type="text" value="" name="color" placeholder="#000000"/>
+            <input type="submit" value="Set" name="set"/>
+            <input type="submit" value="<<" name="decrease"/>
+            <input type="submit" value=">>" name="increase"/>
+        </form>
+        <form method="post" action="/switch">
+            <input id="start_btn" type="submit" value="On" name="on"/>
+            <input id="stop_btn" type="submit" value="Off" name="off" />
+        </form>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <script>
+        let decoded_color = {{color|default("#000000")|tojson}}
+        if (decoded_color) {
+            color_label.innerHTML = decoded_color;
+            color_view.style.backgroundColor = decoded_color;
+        }
+
+        let decoded_error = {{error|default("")|tojson}}
+        if (decoded_error) {
+            color_label.innerHTML = decoded_error;
+        }
+
+        let start_disabled = {{start_disabled|default(False)|tojson}}
+        if (start_disabled) {
+            start_btn.disabled = true
+        } else {
+            start_btn.disabled = false
+        }
+        let stop_disabled = {{stop_disabled|default(False)|tojson}}
+        if (stop_disabled) {
+            stop_btn.disabled = true
+        } else {
+            stop_btn.disabled = false
+        }
+
+        var socket = io('http://0.0.0.0:5000/');
+        socket.on('rgb', function(msg) {
+            color_label.innerHTML = msg.color;
+            color_view.style.backgroundColor = msg.color;
+        });
+
+       socket.on('blink', function(msg) {
+            color_view.style.backgroundColor = msg.color;
+        });
+
+    </script>
+</html>
+
