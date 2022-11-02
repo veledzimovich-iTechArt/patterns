@@ -44,7 +44,7 @@ Patterns balance of "powers"
 - Decorator
 - Facade
 - Adapter
-- Composite
+- Complex
 - Proxy
 
 ### Class or Object
@@ -63,8 +63,9 @@ Patterns balance of "powers"
 - Observer
 - Decorator
 - Facade
-- Composite
+- Complex
 - Proxy
+-
 
 ## How To
 
