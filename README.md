@@ -32,7 +32,6 @@ Patterns balance of "powers"
 - Abstract Factory
 - Factory method
 
-
 #### Behavioral (interaction and responsibilites among classes)
 - State
 - Strategy
