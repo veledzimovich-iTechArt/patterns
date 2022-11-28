@@ -70,13 +70,13 @@ class Beverage(metaclass=abc.ABCMeta):
     def cost(self):
         topping = 0
         if self.has_milk:
-            topping+=self.__milk_cost
+            topping += self.__milk_cost
         if self.has_soy:
-            topping+=self.__soy_cost
+            topping += self.__soy_cost
         if self.has_mocha:
-            topping+=self.__mocha_cost
+            topping += self.__mocha_cost
         if self.has_whip:
-            topping+=self.__whip_cost
+            topping += self.__whip_cost
 
         return topping
 
@@ -214,6 +214,7 @@ class AbstractStringIODecorator(io.StringIO):
         self.string.seek( *args, **kwargs)
     def write(self,  *args, **kwargs):
         self.string.write( *args, **kwargs)
+
     @abc.abstractmethod
     def read(self, num=None):
         pass

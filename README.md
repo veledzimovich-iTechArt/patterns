@@ -23,7 +23,9 @@ Patterns balance of "powers"
 - goal (light side)
 - restrictions (dark side)
 
-## Catalog of patterns by "Gang of Four" (Cristofer Alexander "A Pattern Language")
+## Catalog of patterns by "Gang of Four"
+
+Optional: Cristofer Alexander "A Pattern Language"
 
 ### Goal
 
@@ -64,7 +66,6 @@ Patterns balance of "powers"
 - Facade
 - Complex
 - Proxy
--
 
 ## How To
 
